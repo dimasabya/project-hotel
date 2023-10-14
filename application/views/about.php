@@ -47,11 +47,7 @@
 <section id="about" class="about-me">
       <h2>About Hotel</h2>
       <p>
-        Rumah Sakit Lira Medika mengutamakan keselamatan pasien dan mutu
-        pelayanan yang didukung dengan fasilitas lengkap dan modern serta tenaga
-        medis yang profesional dibidangnya. Rumah Sakit Lira Medika beroperasi
-        sejak 5 Juni 2014 dan berada di atas tanah seluas ± 2 Hektar. Berlokasi
-        di Jalan Syech Quro No 14 Lamaran, Karawang, Jawa Barat.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus id minima, dolore quod repellendus esse modi magnam assumenda numquam doloremque earum ipsum aspernatur amet sint itaque necessitatibus neque enim officia.
       </p>
       <div class="card">
         <img src="img/klinik(1).jpg" alt="Gambar 1" />
