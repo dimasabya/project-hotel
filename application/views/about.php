@@ -47,7 +47,7 @@
 <section id="about" class="about-me">
       <h2>About Hotel</h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus id minima, dolore quod repellendus esse modi magnam assumenda numquam doloremque earum ipsum aspernatur amet sint itaque necessitatibus neque enim officia.
+        hotel
       </p>
       <div class="card">
         <img src="img/klinik(1).jpg" alt="Gambar 1" />
