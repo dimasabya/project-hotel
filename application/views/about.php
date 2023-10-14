@@ -47,7 +47,7 @@
 <section id="about" class="about-me">
       <h2>About Hotel</h2>
       <p>
-        hotel
+        Hotel Arya duta karawang ,salah satu hotel terbaik di kota karawang 
       </p>
       <div class="card">
         <img src="img/klinik(1).jpg" alt="Gambar 1" />
