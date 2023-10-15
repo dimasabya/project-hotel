@@ -6,7 +6,7 @@
     <title>About</title>
     <style type="text/css"> 
         .about-me {
-        background-color: burlywood;
+        background-color: whitesmoke;
         padding: 40px;
         text-align: center;
       }
@@ -47,29 +47,32 @@
 <section id="about" class="about-me">
       <h2>About Hotel</h2>
       <p>
-        Hotel bunga mekar  ,salah satu hotel terjelek di kota karawang 
+        Hotel Four points Berlokasi sangat strategis di wilayah pemukiman mewah di karawang ,terhubung ke pusat perbelanjaan 
+        terbesar di karawang ,yaitu karawang central plaza,techno mart ,dan kawasan galuh mas. jelajahi setiap fasilitas hotel 
+        yang modern nikmati hidangan khas nusantara di restoran hotel kami ,serta bersantai sejenak sambik menikmati minuman dingin
+        di rooftop bar.
       </p>
       <div class="card">
         <img src="img/klinik(1).jpg" alt="Gambar 1" />
         <div class="card-body">
-          <h5 class="card-title">Ruang konsultasi keluhan</h5>
-          <p class="card-text">Tempat Kami</p>
+          <h5 class="card-title">Hotel bintang 3</h5>
+          <p class="card-text">Tetap nyaman dengan standar kebersihan marriot internasional </p>
         </div>
       </div>
       <div class="card">
         <img src="img/klinik2.jpg" alt="Gambar 2" />
         <div class="card-body">
-          <h5 class="card-title">Ruang konsultasi keluhan</h5>
+          <h5 class="card-title">Hotel bintang 4</h5>
           <p class="card-text">
-            untuk mengetahui informasi keluhan dari pasien
+            Ruang pertemuan dan acara dan kolam renang dan akses langsung kawasan mall perbelanjaan
           </p>
         </div>
       </div>
       <div class="card">
         <img src="img/klinik3.jpg" alt="Gambar 3" />
         <div class="card-body">
-          <h5 class="card-title">Ruang Periksa</h5>
-          <p class="card-text">pemeriksaan setelah keluhan</p>
+          <h5 class="card-title">Hotel bintang 5</h5>
+          <p class="card-text"> Hotel dengan fasilitas restoran,bar,kolam renang tempat rekreasi dan staf yang multi profesional</p>
         </div>
       </div>
     </section>
