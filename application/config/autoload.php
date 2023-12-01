@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------
@@ -58,7 +58,7 @@ $autoload['packages'] = array();
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
-$autoload['libraries'] = array();
+$autoload['libraries'] = array('form_validation', 'session', 'database');
 
 /*
 | -------------------------------------------------------------------
@@ -132,4 +132,11 @@ $autoload['language'] = array();
 |
 |	$autoload['model'] = array('first_model' => 'first');
 */
-$autoload['model'] = array();
+
+// autoload untuk mendaftarkan model
+// bisa mendaftarkan banyak model contoh ('ModelA', 'ModelB');
+$autoload['model'] = array('ModelAdmin', 'ModelUser', 'ModelHotel');
+
+//autoload untuk mendaftarkan controller authentikasi
+// mendaftarkan middlware auth
+// $autoload['controller'] = array('AdminAuth');
