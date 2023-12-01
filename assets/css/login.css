@@ -1,0 +1,11 @@
+#changePassword {
+    display: none;
+}
+
+#changePassword.show {
+    display: block;
+}
+
+#log.close {
+    display: none;
+}

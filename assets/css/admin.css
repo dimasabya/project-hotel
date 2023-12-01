@@ -1,0 +1,194 @@
+@font-face {
+    font-family: kaushan;
+    src: url('../font/kaushan.otf') format("opentype");
+}
+
+@font-face {
+    font-family: tusj;
+    src: url('../font/tusj.ttf') format("opentype");
+}
+
+@font-face {
+    font-family: guante;
+    src: url('../font/guante.otf') format("opentype");
+}
+
+*, body {
+    box-sizing: border-box;
+    list-style: none;
+    font-family: kaushan, sans-serif;
+}
+
+.total {
+    font-family: guante, sans-serif;
+}
+
+.title {
+    font-size: 1.25em;
+    color: red;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    filter: drop-shadow(.5px .8px 1.5px red);
+}
+
+
+.sinama {
+    font-size: 11px;
+}
+
+.item-create {
+    margin-left: 0;
+    background-color: rgb(0, 255, 8);
+    border-radius: 10px;
+    padding: .3rem;
+    z-index: 999999999999;
+    text-align: center;
+}
+
+.dark-mode {
+    width: 50px;
+    background-color: blue;
+    color: white;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    padding: .1rem;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+.main-notif:nth-child(even) {
+    background-color: rgb(203, 250, 109);
+}
+
+.main-notif:nth-child(odd) {
+    background-color: rgb(86, 254, 97);
+}
+
+
+.mode-toggle {
+    display: inline-block;
+    translate: 20px;
+}
+
+.border-nav {
+    border: 1px solid black;
+}
+
+.link-create {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.link-create .link-close {
+    position: absolute;
+    top: 1.6rem;
+    right: 17rem;
+    border: 1px solid red;
+    border-radius: 50px;
+    background-color: yellow;
+    width: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.link-close:hover {
+    cursor: pointer;
+}
+
+.content, .link-create {
+    display: none;
+}
+
+.content.active {
+    display: block;
+}
+
+.link-create.show {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+
+.content:hover {
+    cursor: pointer;
+}
+
+#user,
+#hotel,
+#transaksi {
+    overflow-y: auto;
+    height: 90vh;
+    position: relative;
+    z-index: 999;
+}
+
+#user .back,
+#hotel .back,
+#transaksi .back {
+    position: fixed;
+    z-index: 0;
+    top: 85px;
+    left: 248px;
+    right: 60px;
+    z-index: 999;
+}
+
+.backl {
+    z-index: -999999;
+}
+
+
+.card-img {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+
+.img {
+    width: 70px;
+    height: 70px;
+}
+
+.img-profile {
+    width: 50px;
+    height: 50px;
+}
+
+.img-icons {
+    width: 25px;
+    height: 25px;
+}
+
+.img-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image-text {
+    position: absolute;
+    top: -15px;
+    left: 0;
+    background: rgba(255, 192, 192, 0.7);
+    /* Latar belakang transparan */
+    color: white;
+    padding: 0;
+    opacity: 0;
+    /* Awalnya tidak terlihat */
+    transition: opacity 0.3s;
+    /* Efek transisi */
+}
+
+.image-container:hover .image-text {
+    opacity: 1;
+    /* Munculkan teks saat di hover */
+}
