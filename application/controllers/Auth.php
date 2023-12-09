@@ -165,7 +165,7 @@ class Auth extends CI_Controller
 
             $resetLink = base_url('auth/resetPassword?email=' . urlencode($email) . '&token=' . urlencode($token));
 
-            $resetLink = base_url('auth/resetPassword/email=' . urlencode($email) . '&token=' . urlencode($token));
+            // $resetLink = base_url('auth/resetPassword/email=' . urlencode($email) . '&token=' . urlencode($token));
             $emailContent = "Klik disini untuk reset password: <a href=\"$resetLink\">$resetLink</a>";
 
             $this->email->message($emailContent);
