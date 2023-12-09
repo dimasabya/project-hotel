@@ -26,7 +26,7 @@
             <h2 class="border-bottom p-2">Update User</h2>
             <div class="p-5">
                 <!-- dalam tag form di base_urlnya itu didalam mengirimkan paramter id -->
-                <form action="<?= base_url('admin/procces_update_user/' . $user->id) ?>" method="post">
+                <form action="<?= base_url('user/procces_update_user/' . $user->id) ?>" method="post">
                     <input type="hidden" name="id" value="<?= $user->id ?>">
                     <div class="mb-3">
                         <label for="nama" class="form-label">Nama</label>

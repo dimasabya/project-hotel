@@ -26,7 +26,7 @@
             <h2 class="border-bottom p-2">Update Hotel</h2>
             <div class="p-5">
                 <!-- dalam tag form di base_urlnya itu didalam mengirimkan paramter id -->
-                <form action="<?= base_url('admin/procces_update_hotel/' . $hotel->id_hotel) ?>" method="post">
+                <form action="<?= base_url('hotel/procces_update_hotel/' . $hotel->id_hotel) ?>" method="post">
                     <input type="hidden" name="id" value="<?= $hotel->id_hotel ?>">
                     <div class="mb-3">
                         <label for="nama_hotel" class="form-label">Nama Hotel</label>

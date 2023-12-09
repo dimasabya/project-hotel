@@ -50,10 +50,10 @@ class ModelAdmin extends CI_Model
     public function changePassword($password)
     {
         $pw = password_hash($password, PASSWORD_DEFAULT);
-        $id = $this->session->userdata('userEmail');
+        $email = $this->session->userdata('userEmail');
 
         $this->db->set('password', $pw);
-        $this->db->where('id', $id);
+        $this->db->where('email', $email);
         $query = $this->db->update('admin');
 
         if ($query) {

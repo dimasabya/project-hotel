@@ -31,7 +31,7 @@ link.forEach((item) => {
 		});
 
 		document.getElementById(dataTab).classList.add("show");
-		divMain.style.opacity = ".3";
+		divMain.style.opacity = ".2";
 	});
 });
 
@@ -199,11 +199,25 @@ img.src = imgMoon;
 darkMode.addEventListener("click", function () {
 	const toggle = document.querySelector(".dark-mode span");
 	const modeBody = document.querySelector(".mode");
+	const dash = document.querySelector("#idash");
+	const user = document.querySelector("#iuser");
+	const hotel = document.querySelector("#ihotel");
+	const trans = document.querySelector("#itrans");
+	const logout = document.querySelector("#ilogout");
+	const title = document.querySelectorAll(".title");
 
 	if (toggle.classList.contains("mode-toggle")) {
 		darkMode.style.backgroundColor = "blue";
 		modeBody.style.backgroundColor = "white";
 		modeBody.style.color = "black";
+		dash.style.color = "black";
+		user.style.color = "black";
+		hotel.style.color = "black";
+		trans.style.color = "black";
+		logout.style.color = "black";
+		title.forEach((t) => {
+			t.style.color = "yellow";
+		});
 		toggle.classList.remove("mode-toggle");
 		img.src = imgMoon;
 		return;
@@ -213,6 +227,14 @@ darkMode.addEventListener("click", function () {
 	darkMode.style.backgroundColor = "yellow";
 	modeBody.style.backgroundColor = "black";
 	modeBody.style.color = "white";
+	dash.style.color = "white";
+	user.style.color = "white";
+	hotel.style.color = "white";
+	trans.style.color = "white";
+	logout.style.color = "white";
+	title.forEach((t) => {
+		t.style.color = "red";
+	});
 });
 
 // membuat alert setlah data di input itu hanya waktu 5 detik

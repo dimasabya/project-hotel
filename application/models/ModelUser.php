@@ -105,6 +105,7 @@ class ModelUser extends CI_Model
         $hash_password = password_hash($data['password'], PASSWORD_DEFAULT);
         $insert_data = array(
             'username' => $data['username'],
+            'email' => $data['email'],
             'password' => $hash_password,
         );
 

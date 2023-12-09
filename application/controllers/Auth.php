@@ -167,9 +167,10 @@ class Auth extends CI_Controller
 
         $this->email->from('dimasyasir20@gmail.com', 'Hotel.com');
         $this->email->to($email);
-        $this->email->subject('Reset Password');
 
         if ($data === 'verify') {
+            $this->email->subject('Verifikasi Akun');
+
             $verifyLink = base_url('auth/verifikasi?email=' . urlencode($email) . '&token=' . urlencode($token));
 
             // $verifyLink = base_url('auth/verifikasi/email?' . $email . '&token?' . urlencode($token));
@@ -177,6 +178,8 @@ class Auth extends CI_Controller
 
             $this->email->message($emailVerif);
         } else if ($data === 'forgot') {
+            $this->email->subject('Reset Password');
+
             $resetLink = base_url('auth/resetPassword?email=' . urlencode($email) . '&token=' . urlencode($token));
 
             // $resetLink = base_url('auth/resetPassword?email=' . urlencode($email) . '&token=' . urlencode($token));

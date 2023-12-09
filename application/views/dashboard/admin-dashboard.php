@@ -16,7 +16,7 @@
             <h1>Panel</h1>
         </div>
         <!-- icon pemberitahuan -->
-        <div class="col" style="margin-left:10rem">
+        <div id="itahu" class="col" style="margin-left:10rem">
             <div class="item-create">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -53,7 +53,7 @@
             </div>
         </div>
         <!-- icon create -->
-        <div class="col">
+        <div id="ibuat" class="col">
             <div class="item-create">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
@@ -80,7 +80,7 @@
             </div>
         </div>
         <!-- icon dark mode -->
-        <div class="col me-0">
+        <div id="imode" class="col me-0">
             <div class="dark-mode">
                 <span>
                     <img src="" alt="" id="img-icon" class="img-icons">
@@ -101,20 +101,20 @@
                 <div class="border-bottom p-2 mb-2">
                     <h3><?= $username  ?></h3>
                 </div>
-                <button class="btn btn-info border-bottom  btn-nav" data-tabs="admin">Dashboard</button>
-                <button class="btn btn-info border-bottom btn-nav" data-tabs="user">User</button>
-                <button class="btn btn-info border-bottom btn-nav" data-tabs="hotel">Hotel</button>
-                <button class="btn btn-info border-bottom  btn-nav" data-tabs="transaksi">Transaksi</button>
+                <button id="idash" class="btn btn-info border-bottom btn-nav" data-tabs="admin">Dashboard</button>
+                <button id="iuser" class="btn btn-info border-bottom btn-nav" data-tabs="user">User</button>
+                <button id="ihotel" class="btn btn-info border-bottom btn-nav" data-tabs="hotel">Hotel</button>
+                <button id="itrans" class="btn btn-info border-bottom  btn-nav" data-tabs="transaksi">Transaksi</button>
             </div>
             <div class="col-12">
-                <a href="<?= base_url('admin/logout') ?>" class="btn btn-info">Logout</a>
+                <a id="ilogout" onclick="logout()" href="<?= base_url('admin/logout') ?>" class="btn btn-info">Logout</a>
             </div>
         </div>
         <!-- admin -->
         <div class="col ms-1 content  p-2 active" id="admin">
             <div class="row">
                 <div class="col-12 p-2">
-                    <h3>Hai <?= $username ?></h3>
+                    <h3>Hai <span class="title"><?= $username ?></span></h3>
                     <p>Selamat Datang Kembali di Aplikasi <span class="title">Hotel.com</span></p>
                 </div>
                 <div class="col-12">
@@ -216,7 +216,6 @@
                         <th scope="col">Nama</th>
                         <th scope="col">Email</th>
                         <th scope="col">Username</th>
-                        <!-- <th scope="col">Password</th> -->
                         <th scope="col">isActive</th>
                         <th scope="col">Actions</th>
                     </tr>
@@ -229,10 +228,9 @@
                             <td><?= $row->nama ?></td>
                             <td><?= $row->email ?></td>
                             <td><?= $row->username ?></td>
-                            <!-- <td><?= (strlen($row->password) > 10) ? substr($row->password, 0, 10) . '...' : $row->password ?></td> -->
                             <td><?= $row->isActive ?></td>
                             <td>
-                                <a href="<?= base_url('admin/update_user?id=' . urlencode($row->id)); ?>" class="btn btn-warning image-container">
+                                <a href="<?= base_url('user/update_user?id=' . urlencode($row->id)); ?>" class="btn btn-warning image-container">
                                     <img class="img-icons " src="<?php base_url() ?>assets/icons/person-fill-up.svg" alt="icons-update">
                                     <span class="image-text">update</span>
                                 </a>
@@ -284,7 +282,7 @@
                             <td><?= $row->kota ?></td>
                             <td><?= (strlen($row->desk) > 35) ? substr($row->desk, 0, 35) . '...' : $row->desk ?></td>
                             <td>
-                                <a href="<?= base_url('admin/update_hotel?id=' . urlencode($row->id_hotel)); ?>" class="btn btn-warning image-container">
+                                <a href="<?= base_url('hotel/update_hotel?id=' . urlencode($row->id_hotel)); ?>" class="btn btn-warning image-container">
                                     <img class="img-icon" src="<?php base_url() ?>assets/icons/person-fill-up.svg" alt="icons-update">
                                     <span class="image-text">update</span>
                                 </a>
@@ -348,7 +346,7 @@
                             <td><?= $row->jumlah_orang ?></td>
                             <td><?= $row->status ?></td>
                             <td class="d-flex gap-3">
-                                <a href="<?= base_url('admin/update_user/' . $row->id_reservasi); ?>" class="btn btn-warning image-container">
+                                <a href="<?= base_url('transaksi/update_reservasi/' . $row->id_reservasi); ?>" class="btn btn-warning image-container">
                                     <img class="img-icon" src="<?php base_url() ?>assets/icons/person-fill-up.svg" alt="icons-update">
                                     <span class="image-text">update</span>
                                 </a>
