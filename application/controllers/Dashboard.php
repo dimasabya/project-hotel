@@ -36,8 +36,6 @@ class Dashboard extends CI_Controller
             $data['username'] = $username;
             $data['foto'] = $foto;
 
-            // $this->session->set_flashdata('success', "Wellcome");
-
             $this->load->view('header/header');
             $this->load->view('dashboard/admin-dashboard', $data);
             $this->load->view('footer/footer');

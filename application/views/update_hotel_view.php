@@ -40,11 +40,6 @@
                         <label for="desk" class="form-label">Deskripsi</label>
                         <input type="text" class="form-control" name="desk" value="<?= $hotel->desk ?>">
                     </div>
-                    <!-- <div class="mb-3">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" name="password" value="<?= $hotel->password ?>">
-                    </div> -->
-
                     <button type="submit" class="btn btn-danger mb-3">Update</button>
                 </form>
             </div>

@@ -72,14 +72,6 @@ class Auth extends CI_Controller
         } else {
             redirect('admin');
         }
-
-        // if ($user) {
-        //     $this->session->set_userdata('userEmail', $user->email);
-        //     $this->load->view('login/lupa-password');
-        // } else {
-        //     $this->session->set_flashdata('error', 'Username Tidak di Temukan');
-        //     redirect('admin');
-        // }
     }
 
     public function changePassword()
@@ -144,26 +136,18 @@ class Auth extends CI_Controller
     {
         $config = array(
             'protocol' => 'smtp',
-            // 'smtp_host' => 'ssl://smtp.googlemail.com',
             'smtp_host' => 'smtp.gmail.com',
             'smtp_port' => 587,
-            // 'smtp_port' => 465,
             'smtp_user' => 'dimasyasir20@gmail.com',
             'smtp_pass' => 'dxzmaqcvmzlvkdrv',
-            // 'smtp_user' => '12220418@bsi.ac.id',
-            // 'smtp_pass' => '2000-09-20',
             'mailtype' => 'html',
             'charset' => 'utf-8',
             'newline' => "\r\n",
             'smtp_crypto' => 'tls',
             'wordwrap' => TRUE,
-            // 'ssl_verify_peer' => FALSE,
-            // 'ssl_verify_peer_name' => FALSE,
         );
-        // 'allow_self_signed' => true,
 
         $this->load->library('email', $config);
-        // $this->load->initialize($config);
 
         $this->email->from('dimasyasir20@gmail.com', 'Hotel.com');
         $this->email->to($email);
@@ -173,7 +157,6 @@ class Auth extends CI_Controller
 
             $verifyLink = base_url('auth/verifikasi?email=' . urlencode($email) . '&token=' . urlencode($token));
 
-            // $verifyLink = base_url('auth/verifikasi/email?' . $email . '&token?' . urlencode($token));
             $emailVerif = "Klik disini untuk melakukan verifikasi akun anda: <a href=\"$verifyLink\">$verifyLink</a>";
 
             $this->email->message($emailVerif);
@@ -182,8 +165,7 @@ class Auth extends CI_Controller
 
             $resetLink = base_url('auth/resetPassword?email=' . urlencode($email) . '&token=' . urlencode($token));
 
-            // $resetLink = base_url('auth/resetPassword?email=' . urlencode($email) . '&token=' . urlencode($token));
-            // $resetLink = base_url('auth/resetPassword/email=' . urlencode($email) . '&token=' . urlencode($token));
+            $resetLink = base_url('auth/resetPassword/email=' . urlencode($email) . '&token=' . urlencode($token));
             $emailContent = "Klik disini untuk reset password: <a href=\"$resetLink\">$resetLink</a>";
 
             $this->email->message($emailContent);
@@ -195,19 +177,9 @@ class Auth extends CI_Controller
         } else {
             $this->email->debug = true;
             show_error($this->email->print_debugger());
-            // log_message('error', 'Email gagal dikirim!');
             log_message('error', $this->email->print_debugger()); // Menampilkan informasi debugging ke log aplikasi
             return false;
         }
-        // $this->email->send();
-        // $this->email->print_debugger();
-
-        // if ($this->email->send()) {
-        //     $this->email->print_debugger();
-        //     return true;
-        // } else {
-        //     return false;
-        // }
     }
 
     public function resetPassword()

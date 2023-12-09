@@ -75,27 +75,7 @@
     }
 </script>
 <script src="<?= base_url(); ?>assets/js/admin.js"></script>
-<!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
-<!-- <script>
-    function updateNotifikasi() {
-        $.ajax({
-            url: '<?php echo site_url('notifikasi/getUnreadCount'); ?>',
-            type: 'Get',
-            dataType: 'json',
-            success: function(response) {
-                $('#unReadCount').text(response.unReadCount)
-            }
-        })
 
-    }
-    $(document).ready(function() {
-        console.log('oke')
-        updateNotifikasi()
-
-
-        setInterval(updateNotifikasi, 8000)
-    })
-</script> -->
 </body>
 
 </html>
