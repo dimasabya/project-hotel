@@ -138,8 +138,8 @@ class Auth extends CI_Controller
             'protocol' => 'smtp',
             'smtp_host' => 'smtp.gmail.com',
             'smtp_port' => 587,
-            'smtp_user' => 'your_email',
-            'smtp_pass' => 'your_password',
+            'smtp_user' => 'you_mail',
+            'smtp_pass' => 'you_passwod',
             'mailtype' => 'html',
             'charset' => 'utf-8',
             'newline' => "\r\n",
@@ -149,7 +149,7 @@ class Auth extends CI_Controller
 
         $this->load->library('email', $config);
 
-        $this->email->from('your_email', 'Hotel.com');
+        $this->email->from('you_mail', 'Hotel.com');
         $this->email->to($email);
 
         if ($data === 'verify') {

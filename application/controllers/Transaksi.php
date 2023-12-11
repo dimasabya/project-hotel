@@ -24,4 +24,14 @@ class Transaksi extends CI_Controller
             redirect('dashboard');
         }
     }
+
+    public function delete_transaksi()
+    {
+        $id = $this->input->get('id');
+        $this->ModelHotel->delete_transaksi($id);
+        $this->ModelHotel->delete_detail_transaksi($id);
+
+        $this->session->set_flashdata('success', 'Data transaksi berhasik dihapus dengan id ' . $id);
+        redirect('dashboard');
+    }
 }

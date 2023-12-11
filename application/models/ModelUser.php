@@ -59,8 +59,16 @@ class ModelUser extends CI_Model
 
     public function update_user($id, $data)
     {
+        $hash_password = password_hash($data['password'], PASSWORD_DEFAULT);
+        $insert_data = array(
+            'nama' => $data['nama'],
+            'username' => $data['username'],
+            'email' => $data['email'],
+            'password' => $hash_password,
+        );
+
         $this->db->where('id', $id);
-        $this->db->update('user', $data);
+        $this->db->update('user', $insert_data);
     }
 
     // hotel

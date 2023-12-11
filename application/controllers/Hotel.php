@@ -65,4 +65,13 @@ class Hotel extends CI_Controller
             redirect('dashboard');
         }
     }
+
+    public function delete_hotel()
+    {
+        $id = $this->input->get('id');
+        $this->ModelHotel->delete_by_id($id);
+
+        $this->session->set_flashdata('success', 'Data Hotel Berhasil di Hapus dengan id ' . $id);
+        redirect('dashboard');
+    }
 }

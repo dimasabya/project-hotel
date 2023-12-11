@@ -61,4 +61,13 @@ class User extends CI_Controller
             redirect('dashboard');
         }
     }
+
+    public function delete_by_id()
+    {
+        $id = $this->input->get('id');
+        $this->ModelUser->delete_by_id($id);
+
+        $this->session->set_flashdata('success', 'Data User Berhasil di Hapus dengan id ' . $id);
+        redirect('dashboard');
+    }
 }

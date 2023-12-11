@@ -234,7 +234,7 @@
                                     <img class="img-icons " src="<?php base_url() ?>assets/icons/person-fill-up.svg" alt="icons-update">
                                     <span class="image-text">update</span>
                                 </a>
-                                <a id="delete" href="<?= base_url('admin/delete_by_id?id=' . urlencode($row->id)); ?>" class="btn btn-danger image-container" onclick="return confirm('Hapus akun <?= $row->username; ?>?')">
+                                <a id="delete" href="<?= base_url('user/delete_by_id?id=' . urlencode($row->id)); ?>" class="btn btn-danger image-container" onclick="return confirm('Hapus akun <?= $row->username; ?>?')">
                                     <img class="img-icons " src="<?php base_url() ?>assets/icons/person-x-fill.svg" alt="">
                                     <span class="image-text">Delete</span>
                                 </a>
@@ -286,7 +286,7 @@
                                     <img class="img-icon" src="<?php base_url() ?>assets/icons/person-fill-up.svg" alt="icons-update">
                                     <span class="image-text">update</span>
                                 </a>
-                                <a href="<?= base_url('admin/delete_hotel?id=' . urlencode($row->id_hotel)); ?>" class="btn btn-danger image-container" onclick="return confirm('Hapus hotel <?= $row->nama_hotel; ?>?')">
+                                <a href="<?= base_url('hotel/delete_hotel?id=' . urlencode($row->id_hotel)); ?>" class="btn btn-danger image-container" onclick="return confirm('Hapus hotel <?= $row->nama_hotel; ?>?')">
                                     <img class="img-icon" src="<?php base_url() ?>assets/icons/person-x-fill.svg" alt="">
                                     <span class="image-text">Delete</span>
                                 </a>
@@ -350,7 +350,7 @@
                                     <img class="img-icon" src="<?php base_url() ?>assets/icons/person-fill-up.svg" alt="icons-update">
                                     <span class="image-text">update</span>
                                 </a>
-                                <a href="<?= base_url('admin/delete_transaksi?id=' . $row->id_reservasi); ?>" class="btn btn-danger image-container" onclick="return confirm('Hapus transaksi ini <?= $row->nama; ?>')">
+                                <a href="<?= base_url('transaksi/delete_transaksi?id=' . $row->id_reservasi); ?>" class="btn btn-danger image-container" onclick="return confirm('Hapus transaksi ini <?= $row->nama; ?>')">
                                     <img class="img-icon" src="<?php base_url() ?>assets/icons/person-x-fill.svg" alt="">
                                     <span class="image-text">Delete</span>
                                 </a>
